@@ -47,10 +47,8 @@ def scrape_modo_prices_data(headers,t_start,t_end):    #PRICES
         
     
     
-  
-    #clean the excess that is > tend
 
-    #Merge dataframes (concat/merge)
+    #Merge dataframes (concat)
     combined_dataframe = pd.concat(out, ignore_index=True)
     combined_dataframe = combined_dataframe.drop_duplicates()
     
