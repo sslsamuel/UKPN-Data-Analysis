@@ -113,7 +113,7 @@ def plot_prices(df):    #PRICES
     plt.grid(True) 
     plt.xticks(rotation=45)  # Rotate x-axis labels for better readability
     plt.show()
-plot_prices(scrape_modo_prices_data('e0b443f710899c01429a3e6de07e7a9eae48ab66e1034a6dbb74160eafd5','2022-07-01','2023-06-30'))
+plot_prices(scrape_modo_prices_data('API KEY','2022-07-01','2023-06-30'))
 
 # COMMAND ----------
 
@@ -171,7 +171,7 @@ def scatter_graph_prices(merged_df):    #PRICES
     plt.axhline(0, c='red')
     plt.show()
     
-scatter_graph_prices(merge_data_prices("/dbfs/FileStore/pidata_anon.csv",scrape_modo_prices_data('e0b443f710899c01429a3e6de07e7a9eae48ab66e1034a6dbb74160eafd5','2022-07-01','2023-06-30')))
+scatter_graph_prices(merge_data_prices("/dbfs/FileStore/pidata_anon.csv",scrape_modo_prices_data('API KEY','2022-07-01','2023-06-30')))
 
 # COMMAND ----------
 
@@ -188,7 +188,7 @@ def scatter_graph_frequency(merged_df):    #FREQUENCY
     plt.axhline(0, c='green')
     plt.show()
     
-scatter_graph_frequency(merge_data_frequency("/dbfs/FileStore/pidata_anon.csv",scrape_modo_frequency_data('e0b443f710899c01429a3e6de07e7a9eae48ab66e1034a6dbb74160eafd5','2023-01-01','2023-06-30')))
+scatter_graph_frequency(merge_data_frequency("/dbfs/FileStore/pidata_anon.csv",scrape_modo_frequency_data('API KEY','2023-01-01','2023-06-30')))
 
 # COMMAND ----------
 
@@ -206,7 +206,7 @@ def scatter_hex_prices(merged_df):
     plt.axvline(200, c='red')
     plt.axhline(0, c='red')
     plt.show()
-scatter_hex_prices(merge_data_prices("/dbfs/FileStore/pidata_anon.csv",scrape_modo_prices_data('e0b443f710899c01429a3e6de07e7a9eae48ab66e1034a6dbb74160eafd5','2022-07-01','2023-06-30')))
+scatter_hex_prices(merge_data_prices("/dbfs/FileStore/pidata_anon.csv",scrape_modo_prices_data('API KEY','2022-07-01','2023-06-30')))
 
 # COMMAND ----------
 
@@ -224,7 +224,7 @@ def scatter_hex_frequency(merged_df):
     plt.axvline(50, c='green')
     plt.axhline(0, c='green')
     plt.show()
-scatter_hex_frequency(merge_data_frequency("/dbfs/FileStore/pidata_anon.csv",scrape_modo_frequency_data('e0b443f710899c01429a3e6de07e7a9eae48ab66e1034a6dbb74160eafd5','2023-01-01','2023-06-30')))
+scatter_hex_frequency(merge_data_frequency("/dbfs/FileStore/pidata_anon.csv",scrape_modo_frequency_data('API KEY','2023-01-01','2023-06-30')))
 
 # COMMAND ----------
 
@@ -239,7 +239,7 @@ api_url = f"https://api.modo.energy/public/v1/uk_prices?date_from=2023-08-09&dat
 # Options are uk_prices, grid_frequency etc ------>
 
 # Access with your credentials
-apikey = 'e0b443f710899c01429a3e6de07e7a9eae48ab66e1034a6dbb74160eafd5'
+apikey = 'API KEY'
 headers = {'X-Token': apikey}
 
 # Hit the API
